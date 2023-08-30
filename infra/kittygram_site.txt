@@ -1,0 +1,10 @@
+IP: 84.201.164.90;
+name_taski: https://mimidor.hopto.org/;
+name_kittygram: https://mimidor2.hopto.org/;
+kittygram:
+login: admin;
+password: yandex123;
+
+taski:
+login: admin2;
+password: yandex123; 
