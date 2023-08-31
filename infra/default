@@ -16,23 +16,23 @@ location /api/ {
     }
 
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/mimidor.hopto.org/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/mimidor.hopto.org/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl; 
+    ssl_certificate /etc/letsencrypt/live/mimidor.hopto.org/fullchain.pem; 
+    ssl_certificate_key /etc/letsencrypt/live/mimidor.hopto.org/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf; 
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; 
 
 }
 server {
     if ($host = mimidor.hopto.org) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    } 
 
 
 
     listen 80;
     server_name 84.201.164.90 mimidor.hopto.org;
-    return 404; # managed by Certbot
+    return 404; 
 
 
 }
@@ -64,24 +64,24 @@ server {
     }
 
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/mimidor2.hopto.org/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/mimidor2.hopto.org/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl; 
+    ssl_certificate /etc/letsencrypt/live/mimidor2.hopto.org/fullchain.pem; 
+    ssl_certificate_key /etc/letsencrypt/live/mimidor2.hopto.org/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; 
 
 }
 
  server {
     if ($host = mimidor2.hopto.org) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    } 
 
 
 
     listen 80;
     server_name mimidor2.hopto.org;
-    return 404; # managed by Certbot
+    return 404; 
 
 
 }
